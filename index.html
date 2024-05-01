@@ -8,14 +8,16 @@
 </head>
 
 <style>
-    *{
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-    body{
+
+    body {
         overflow: hidden;
     }
+
     section {
         display: flex;
         align-items: center;
@@ -69,8 +71,6 @@
         border: none;
         border-radius: 10px;
         cursor: pointer;
-        touch-action: manipulation;
-        touch-action: none;
     }
 
     button:hover {
@@ -88,10 +88,11 @@
     }
 
     @media screen and (max-width: 950px) {
-        body{
+        body {
             overflow: hidden;
         }
-        .joint{
+
+        .joint {
             width: 90%;
         }
 
@@ -116,13 +117,13 @@
         const myText = document.getElementById('myText')
         const btn = document.getElementById('btn')
         const grade = document.getElementById('grade')
-        function sub(){
+        function sub() {
             student_result = myText.value
-            if (!student_result){
+            if (!student_result) {
                 grade.textContent = 'Enter Your Score'
-            }else if(student_result >= 0 && student_result <= 44 ){
+            } else if (student_result >= 0 && student_result <= 44) {
                 grade.textContent = 'Failed'
-            }else if (student_result <= 49) {
+            } else if (student_result <= 49) {
                 grade.textContent = 'D'
             } else if (student_result <= 59) {
                 grade.textContent = 'C'
@@ -132,10 +133,13 @@
                 grade.textContent = 'A'
             } else {
                 grade.textContent = 'Enter A Valid Score'
- 
+
             }
-        } 
-        
+        }
+
+        $(document).on('touchmove', function (e) {
+            e.preventDefault();
+        });
 
     </script>
 </body>
