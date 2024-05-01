@@ -57,6 +57,7 @@
     input {
         height: 30px;
         outline: none;
+        padding: 10px;
     }
 
     button {
@@ -66,6 +67,7 @@
         border: none;
         border-radius: 10px;
         cursor: pointer;
+        touch-action: manipulation;
     }
 
     button:hover {
@@ -123,7 +125,6 @@
                 grade.textContent = 'C'
             } else if (student_result <= 69) {
                 grade.textContent = 'B'
-            
             } else if (student_result <= 100) {
                 grade.textContent = 'A'
             } else {
